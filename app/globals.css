@@ -3,6 +3,10 @@
 @tailwind utilities;
 
 
+.banner {
+  background: linear-gradient(to bottom, #3498db, #6c5ce7);
+}
+
 .scale-up-center {
 	-webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 	        animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
