@@ -17,7 +17,6 @@ export default function page({ params }) {
         );
         const data = await res.data;
         const count = data.results.count;
-        console.log(data.results.data);
 
         // Set the search results inside a state
         setSearchResults(data.results.data);

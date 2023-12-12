@@ -15,9 +15,9 @@ export default function SearchCard({id, imageUrl, name, brand}) {
             />
         
             <div>
-                <h4 className="py-2">
+                <h2 className="py-2 text-xl">
                    {name}
-                </h4>
+                </h2>
                 <div className="text-sm md:text-normal pt-2 flex">
                    Brand: <b className='pl-1'>{brand}</b>
                 </div>

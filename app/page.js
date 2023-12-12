@@ -1,8 +1,13 @@
+"use client"
+
 
 import Image from "next/image";
 import "./globals.css";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+
+    const router = useRouter();
 
   const brandCard =
     "h-16 w-24 border rounded hover:bg-opacity-40 hover:-translate-y-1 transition-all cursor-pointer duration-500";
@@ -29,7 +34,7 @@ export default function Home() {
           />
         </div>
         
-        <div className="pt-8">
+        {/* <div className="pt-8">
           <div className="flex justify-center items-center text-lg md:text-2xl py-1">
             From Popular Brands
           </div>
@@ -46,7 +51,7 @@ export default function Home() {
             <button className={`${brandCard} p-4 m-4`}>Bose</button>
             <button className={`${brandCard} p-4 m-4`}>Bose</button>
           </div>
-        </div>
+        </div> */}
       </section>
     </div>
   );
