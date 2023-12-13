@@ -13,13 +13,11 @@ export default function ProductItem({ params }) {
 
   useEffect(() => {
     async function fetchData() {
-      console.log(params.id);
       try {
         const res = await axios.get(
           `http://localhost:5000/api/compare/${params.id}`
         );
         const data = await res.data;
-        console.log(data?.results);
         setProduct(data?.results?.product[0]);
         setComparison(data?.results?.comparison);
       } catch (error) {
@@ -36,7 +34,7 @@ export default function ProductItem({ params }) {
       <div className="p-4 m-4 block md:flex justify-center rounded-lg">
         <Image
           src={product?.image_url}
-          alt="banner"
+          alt="product-img"
           className="p-1 m-1 rounded-lg"
           width={500}
           height={400}
@@ -49,7 +47,7 @@ export default function ProductItem({ params }) {
           </p>
 
           <div className="py-4">
-            <h1 className="text-2xl pt-12">Available on</h1>
+            <h1 className="text-2xl pt-12 px-1">Available on</h1>
             <div>
               {comparison?.map((data) => (
                 <div

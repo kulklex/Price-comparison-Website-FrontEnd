@@ -8,7 +8,7 @@ export default function SearchCard({id, imageUrl, name, brand}) {
         <div className="block md:flex justify-between space-x-2 space-y-2">
             <Image 
                 src={imageUrl}
-                alt='banner'
+                alt='product-img'
                 className='p-1 m-1 rounded'
                 width={200}
                 height={200}
