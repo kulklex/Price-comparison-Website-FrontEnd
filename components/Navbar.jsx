@@ -5,10 +5,14 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export default function Navbar() {
+  //State for searchTerm data
   const [searchTerm, setSearchTerm] = useState("");
 
+  //nextjs router
   const router = useRouter();
 
+
+  //Function to handle the search 
   const handleSubmit = async (event) => {
     event.preventDefault();
 
@@ -21,6 +25,7 @@ export default function Navbar() {
     }
   };
 
+  //Function to make sure handleSubmit() is called after user presses 'Enter' key
   const handleKeyDown = (event) => {
     if (event.key === "Enter") {
       handleSubmit(event);
