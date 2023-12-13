@@ -7,6 +7,7 @@ import axios from "axios";
 export default function page({ params }) {
   const [searchResults, setSearchResults] = useState("");
 
+   // Fetch data based on the searchTerm provided
   useEffect(() => {
     async function fetchData() {
       try {

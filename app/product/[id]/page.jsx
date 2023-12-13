@@ -6,11 +6,14 @@ import axios from "axios";
 import { useRouter } from "next/navigation";
 
 export default function ProductItem({ params }) {
+  //nextjs router
   const router = useRouter();
 
+  // States for product and comparison data
   const [product, setProduct] = useState();
   const [comparison, setComparison] = useState();
 
+  // Fetch data based on the product ID
   useEffect(() => {
     async function fetchData() {
       try {
